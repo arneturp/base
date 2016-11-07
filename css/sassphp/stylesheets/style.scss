@@ -1,0 +1,331 @@
+// ====================================================
+// Variables
+// ====================================================
+
+$black: #333333;
+$primary: #D63932;
+$white: #FFFFFF;
+$subtle-grey: #F2F2F2;
+
+// ====================================================
+// Header
+// ====================================================
+
+header {
+    position: relative;
+}
+header .contact-info a {
+    color: $white !important;
+}
+
+// ====================================================
+// Slider
+// ====================================================
+
+#slider {
+    z-index: 100 !important;
+    .slide {
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .slide {
+        height: 300px;
+
+        .overlay {
+            display: none
+        }
+
+
+    }
+
+    .hidden-text-small {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slide {
+        height: 200px;
+    }
+}
+// ====================================================
+// Navigation
+// ====================================================
+
+@media screen and (min-width: 768px) {
+    .navbar-default .nav li:last-of-type a {
+        background-color: $primary !important;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-top: 12px;
+        border-radius: 5px;
+    }
+}
+// ====================================================
+// Typography
+// ====================================================
+
+h1 {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+h1::before {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    left: 50%;
+    bottom: -37px;
+    width: 100px;
+    transform: translateX(-50%);
+
+}
+
+// ====================================================
+// Forms
+// ====================================================
+
+input, textarea, select {
+    width: 100%;
+    border: none;
+    display: block;
+    padding: 5px 10px;
+    outline: none;
+}
+
+select {
+    height: 35px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #D63932;
+    border: none;
+    border-bottom: 5px solid #be2d26;
+    padding: 5px 15px;
+    float: right;
+    color: #fff;
+    border-radius: 3px;
+    width: auto;
+}
+
+// ====================================================
+// Modal
+// ====================================================
+
+.modal-wrapper {
+    position: fixed;
+    background: rgba(0, 0, 0, .85);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding-top: 40px;
+    overflow: scroll;
+
+    .modal {
+        width: 90%;
+        max-width: 450px;
+        background: #E6E6E6;
+        border-radius: 3px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .9);
+        margin: 0 auto;
+        padding: 20px 30px;
+        position: relative;
+
+        .modal-close {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 28px;
+            outline: none;
+            border: none;
+            background: none;
+        }
+    }
+}
+
+#modal-offerte {
+    display: none;
+}
+
+
+// ====================================================
+// Footer
+// ====================================================
+
+.copyright a {
+    color: rgba(255, 255, 255, .5) !important;
+}
+
+.footer-nav a {
+    color: $white !important;
+}
+// ====================================================
+// Contact page
+// ====================================================
+
+.maps-info {
+    background-color: #E6E6E6;
+    padding: 20px;
+}
+
+#maps-container {
+    height:100px;
+    width: calc(100% + 30px);
+    margin-right: -30px;
+}
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+// ====================================================
+// Social Media Header Buttons
+// ====================================================
+
+.squared-social-media {
+    position: absolute;
+    right: 0;
+    bottom: -120px;
+    max-width: 60px;
+
+
+    a {
+        color: $white;
+        margin-bottom: 5px;
+        float: right;
+        width: 50px;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        transition: all .15s ease-in-out;
+
+        &.facebook {
+            background-color: #3b5998 !important;
+        }
+
+        &.google-plus {
+            background-color: #dd4b39 !important;
+        }
+
+        &:hover {
+            padding-right: 5px;
+            width: 55px;
+        }
+
+        i {
+            font-size: 26px;
+        }
+    }
+}
+
+.navbar-default .navbar-brand img {
+    z-index: 999;
+}
+
+
+
+
+// ====================================================
+// Media queries
+// ====================================================
+
+@media screen and (max-width: 991px) {
+    .navbar-default .container .nav li a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+
+    .panel {
+        margin-bottom: 30px;
+    }
+
+    #maps-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .squared-social-media {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+    header {
+        .contact-info {
+            display: none;
+        }
+
+        .navbar-default .navbar-brand img {
+            top: -40px;
+            width: 180px;
+
+            &:hover {
+                top: -35px;
+            }
+        }
+
+        #navbar {
+            width: 100%;
+        }
+
+        .nav {
+            padding-top: 40px;
+
+            li a {
+                text-align: center;
+                background-color: transparent !important;
+            }
+        }
+
+        .nav li:last-of-type() a {
+            text-align: center;
+            background-color: transparent !important;
+        }
+    }
+
+    main {
+        padding-top: 40px;
+    }
+
+    h1 {
+        margin-bottom: 60px;
+
+        &::before {
+            bottom: -30px;
+        }
+    }
+}
+
+.hidden-text-small {
+    display: none;
+}
